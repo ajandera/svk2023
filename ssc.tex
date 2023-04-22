@@ -1,0 +1,95 @@
+
+\documentclass{ssc}
+
+% Additional packages
+\usepackage[main=english,slovak]{babel}
+% For thesis written in English just change the order of languages:
+% \usepackage[main=english,slovak]{babel}
+
+\usepackage{listings}  % for source code
+% Listings settings
+% See for details: https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+\usepackage{qtree}
+\usepackage{tikz-qtree}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\lstset{
+    basicstyle=\small\ttfamily,  % smaller typewriter font
+    showstringspaces=false       % don't show spaces in string
+}
+
+% Location of file with bibliography resources
+\addbibresource{bibliography.bib}
+
+
+%Variables
+%\thesisspec{figures/thesisspec.png} 
+
+\title{Automatic prediction module builder}{Automatický tvorca predickných modelov}
+
+\author[Bc.]{Aleš}{Jandera}
+\supervisor{doc. Ing. Tomáš Škovránek, PhD.} %veduci prace
+%\college{University of Žilina}{Žilinská univerzita} %univerzita
+%\faculty{Faculty of Electrical Engineering and informatics}{Fakulta elektrotechniky a informatiky} %fakulta
+%\department{Department of Computers and Informatics}{Katedra počítačov a informatiky} %katedra
+%\departmentacr{DCI}{KPI} % skratka katedry
+\submissiondate{21}{4}{2023}
+%\fieldofstudy{Process control of raw materials and material extraction and processing}
+%\studyprogramme{Cybernetics}
+%\city{Košice} %mesto
+\keywords{Mathematic modeling, forecasting, linear prediction}{Matematické modelovanie, predpoved, lineárna predikcia}
+
+\abstract{%
+    % english 
+	Sales forecasting can be divided into two main categories: short-term and long-term forecasting.
+    Short-term forecasting is generally done on a weekly or monthly basis. Long-term forecasting is done on a quarterly or annual basis.
+    There are many different methods that can be used for sales forecasting.
+    The most common method is trend analysis. Trend analysis looks at past sales data to identify
+    patterns and trends that can be used to predict future sales.
+    Other methods include regression analysis and time series analysis.
+    Advance prediction modeling is a type of long-term forecasting.
+    It uses historical data and statistical techniques to predict future sales.
+    Advance prediction modeling is often used by companies to make strategic decisions about inventory, pricing, and marketing.
+}{%
+    % slovak 
+	Prognózy predaja možno rozdeliť do dvoch hlavných kategórií: krátkodobá a dlhodobá prognóza.
+    Krátkodobé prognózy sa vo všeobecnosti vykonávajú týždenne alebo mesačne. Dlhodobé prognózy sa robia štvrťročne alebo ročne.
+    Existuje mnoho rôznych metód, ktoré možno použiť na predpovedanie predaja.
+    Najbežnejšou metódou je analýza trendov. Analýza trendov sa zameriava na údaje o minulých predajoch, aby identifikovala vzory a trendy,
+    ktoré možno použiť na predpovedanie budúceho predaja. Ďalšie metódy zahŕňajú regresnú analýzu a analýzu časových radov.
+    Predbežné predikčné modelovanie je typ dlhodobého predpovedania.
+    Na predpovedanie budúceho predaja využíva historické údaje a štatistické techniky.
+    Pokročilé predikčné modelovanie často používajú spoločnosti na strategické rozhodnutia o zásobách, cenách a marketingu.
+}
+
+%% -----------------------------------------------------------------
+%%          _                                       _   
+%%       __| | ___   ___ _   _ _ __ ___   ___ _ __ | |_ 
+%%      / _` |/ _ \ / __| | | | '_ ` _ \ / _ \ '_ \| __|
+%%     | (_| | (_) | (__| |_| | | | | | |  __/ | | | |_ 
+%%      \__,_|\___/ \___|\__,_|_| |_| |_|\___|_| |_|\__|
+%%                                                      
+%% -----------------------------------------------------------------
+
+\begin{document}
+%% Title page, abstract, declaration etc.:
+\frontmatter{}
+
+\newpage
+
+%% Chapters
+\include{chapters/analysis}
+\include{chapters/implementation}
+
+% good linebraking of bibtex url
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+%% The bibliography
+\printbibliography[heading=bibintoc]
+
+\label{theend} % the last page of the thesis
+
+
+\end{document}
