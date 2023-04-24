@@ -30,31 +30,80 @@
         \caption{Application overview}
     \end{figure}
         \subsection{Import datasets}
-        First step to get results from predictive application. Use the button in the left bottom corner~\ref{fig:manual} to import our dataset. Application is able to process datasets in csv or excel format. Application is trying to identify your dataset by the setting~\ref{subsec:setting}. If the problem in our imported dataset is detected, application show warning~\ref{fig:warning} with the tips how to preparte your dataset in a better way.
+        First step to get results from predictive application. Use the button in the left
+        bottom corner~\ref{fig:manual} to import our dataset. Application is able to
+        process datasets in csv or excel format. Application is trying to identify
+        your dataset by the setting~\ref{subsec:setting}. If the problem in our imported
+        dataset is detected, application show warning~\ref{fig:warning} with the tips
+        how to preparte your dataset in a better way.
         \subsection{Setting}\label{subsec:setting}
+        Application has two way of settings, we can define parameters of our model manualy or
+        we can choose automatic setting of application to detect the best prediction model
+        based on inserted dataset.\\
+        \\
         \textbf{Manual setting}\\
+        Manual setting is to create a prediction model based on linear prediction. We are
+        able to use these parameters:
         \begin{itemize}
-            \item Prediction model
-            \item Order of predictor
-            \item Trends detection
+            \item \textbf{Prediction model}\\
+            Choose one of type from Linear prediction, Extended linear prediction,
+            Fraction linear prediction.
+            \item \textbf{Order of predictor}\\
+            In this step we are able to set up the order of linear prediction and the
+            period of predicted values.
+            \item \textbf{Trends detection}\\
+            In this setting you are able to choose the length of the period to 
+            identify the prediction model parameters and trends.
         \end{itemize}
-
+        \noindent
         \textbf{Automatic setting}\\
+        Autoimation setting we can used for set up the parameters of neural network,
+        which will be used to set up all optimal parameters for prediction. For set up
+        automation part of application we are able to use these parameters:\\
         \begin{itemize}
-            \item Machine learning cycles
-            \item Machine learning sensitivity
-            \item Machine learning alghoritm
-            \item Identification criteria
+            \item \textbf{Machine learning cycles}\\
+            Number of observations use to find optimal parameters of the model.
+            \item \textbf{Machine learning sensitivity}\\
+            Sensitivity is a measure of how well a machine learning model can
+            detect positive instances. It is also known as the true positive rate
+            (TPR) or recall.
+            \item \textbf{Machine learning alghoritm}\\
+            In this section we are able to choose the neural network or hidden markov model
+            to run in backround. HMM is statistical approach and in specific dataset can provide
+            beter results.
+            \item \textbf{Identification criteria}\\
+            In this part we can choose the maximalization or minimalization as a function
+            to found optimal parameters.
         \end{itemize}
         \subsection{Results}\label{subsec:result}
+        Fo our test purpose we used the automatic setting of the application and try to run
+        over our dataset. On the figure~\ref{fig:results} we can see the results of our application.
+        Application succefully detect the model equation, identify optinal parameters and 
+        calculate the comparison criteria. Model builder create the model with $R^2 = 0.885$.
+        Our application is show the results in these tree sections:\\
+        \\
+        \textbf{Plot of results}\\
+        On the figure~\ref{fig:results} we can see the main window at the middle of the screen
+        where the model results and loaded dataset are plotted.\\
+        \\
+        \textbf{Model equation}\\
+        Under the main section with plotted results is the model equation section where
+        created model by the application is shown.\\
+        \\
+        \textbf{Parameters}\\
+        In the right bottom corner we see the parameters for our model. When we combine 
+        Model equation and Parameters section we are able to use the created model in other
+        opliations and approaches as we need.\\
+        \\
+        \textbf{Error Analysis}\\
+        Thle last section of the application is Error Analysis in where we can find the 
+        result of our created model. Application privides $R^2$, adjusted $R^2$,
+        Root Mean Square Error and Sum Squared Error.
         \begin{center}
             \begin{figure}[!ht]
                 \centering
-                \includegraphics[width=\textwidth]{figures/result.png}
+                \includegraphics[width=0.82\textwidth]{figures/result.png}
                 \caption{Results of prediction}
                 \label{fig:results}
             \end{figure}
         \end{center}
-        \textbf{Plot of results}\\
-        \textbf{Model equation}\\
-        \textbf{Parameters}\\
