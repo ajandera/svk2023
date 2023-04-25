@@ -1,10 +1,10 @@
 \chapter{Analysis}\label{analysis}
       \section{Mathematical models for data prediction}
-      Mathematical prediction models are tools used to forecast the behavior of a system
+      Mathematical prediction models are tools used to forecast the behaviour of a system
       or process. They are typically built using mathematical
       equations or algorithms that are designed to describe the relationship between
-      the input and output variables of the system.\\
-    \\
+      the input and output variables of the system.
+ %
     There are several types of mathematical prediction models, including linear
     regression, time series analysis, and machine learning algorithms such as neural
     networks and decision trees. Each type of model has its strengths and weaknesses,
@@ -13,9 +13,9 @@
     Linear regression models are used to describe the relationship between two or more
     variables by fitting a straight line to the data. Time series analysis is used
     to predict future values of a variable based on its past values, and can be used
-    to forecast trends, seasonal patterns, and other patterns in time series data.\\
-    \\
-    Machine learning algorithms are increasingly being used for prediction modeling,
+    to forecast trends, seasonal patterns, and other patterns in time series data.
+   %
+    Machine learning algorithms are increasingly being used for prediction modelling,
     as they can learn complex relationships between input and output variables and
     adapt to changing data patterns. Neural networks, for example, are designed
     to simulate the structure and function of the human brain and can be used for
@@ -24,10 +24,10 @@
     \\
     Mathematical prediction models are used in a wide range of fields, including
     finance, economics, engineering, and the natural sciences. They can be used
-    to forecast stock prices, predict the spread of disease, optimize industrial
+    to forecast stock prices, predict the spread of disease, optimise industrial
     processes, and much more.
-        \subsection{Regresion models}
-        Regression models are a~type of statistical models used to examine the~relationship
+        \subsection{Regression models}
+        Regression models are  statistical models used to examine the~relationship
         between a~dependent variable and one or more independent variables~\cite{Fahrmeir}.
         The goal of regression analysis is to model the~relationship between these variables
         and make predictions about the dependent variable based on the~values of
@@ -36,56 +36,56 @@
         and understand the relationship between variables. There are several types of
         regression models, including:
         \begin{itemize}
-            \item Linear regression is a~simple regression model where the~relationship between
-            the~dependent and independent variables is modeled using a~linear equation.
-            \item Logistic regression is used for binary classification problems where
-            the~dependent variable is binary and the~goal is to model the~relationship between
-            the~independent variables and the~probability of the~dependent variable being either 0 or 1.
-            \item Multiple regression is used when there are multiple independent variables
-            and the~goal is to model the relationship between all of these variables and the~dependent variable.
-            \item Polynomial regression is used when the~relationship between the~dependent and independent variables
-            is non-linear and can be modeled using a~polynomial equation.
+            \item Linear regression, that uses a~linear equation to describe the relation
+            between independent and dependent variables,
+            \item Logistic regression, where
+            the~dependent variable is binary, being either 0 or 1,
+            \item Multiple regression is used, when there are multiple independent variables,
+            \item Polynomial regression is used when the~relationship between the~dependent
+            and independent variables is non-linear.
         \end{itemize}
 
         The choice of regression model depends on the~nature of the~data and
         the~research question being asked.
+        
         \subsection{Time-series models}
-        Time-series models are mathematical models used to analyze and forecast data
+        Time-series models are mathematical models used to analyse and forecast data
         that are collected over time~\cite{Cryer}. These models are used to study and
-        make predictions about the~trends, patterns, and behavior of the~data over
+        make predictions about the~trends, patterns, and behaviour of the~data over
         time, taking into account historical values and their relationship with
         the~present. Time-series models are widely used in areas such as economics,
         finance, and weather forecasting, among others. The~models are based on
         various statistical techniques, including ARIMA (AutoRegressive Integrated
         Moving Average), SARIMA (Seasonal ARIMA), and exponential smoothing, among
-        others. The~goal of time-series modeling is to build a~mathematical
+        others. The~goal of time-series modelling is to build a~mathematical
         representation of the~underlying process that generates the~time-series data,
         allowing for accurate prediction of future values. Time-series models are
-        statistical models used to analyze and make predictions about time-dependent
+        statistical models used to analyse and make predictions about time-dependent
         data. They are widely used in various fields, including finance, economics,
         engineering, and social sciences.\\
     \\
     Time-series models make use of past values of a~variable to predict future values.
-They assume that there is a~pattern or trend in the~data that can be used to forecast future behavior.
+They assume that there is a~pattern or trend in the~data that can be used to forecast future behaviour.
 Some commonly used time-series models include:
     \begin{itemize}
-        \item Autoregressive Integrated Moving Average (ARIMA). This model is used to analyze and forecast stationary
+        \item Autoregressive Integrated Moving Average (ARIMA) is used to analyse and forecast stationary
         time-series data. It consists of three components: autoregression, differencing, and moving average.
         \item Seasonal Autoregressive Integrated Moving Average (SARIMA) is~an~extension of ARIMA
         that takes into account seasonal patterns in the~data.
-        \item Exponential Smoothing (ETS) is used to forecast time-series data that has a~trend
-        and/or seasonality. It uses a~smoothing parameter to assign more or less weight to past observations
+        \item Exponential Smoothing (ETS) is used to forecast time-series data that have a~trend
+        and/or seasonality. It uses a~smoothing parameter to assign more or less weights to past observations
         based on their recency.
         \item Vector Autoregression (VAR) is used when there are multiple time-series variables
-        that influence each other. It can be used to analyze the~relationships between these variables and to make
-        predictions about their future be   havior.
-        \item These models are valuable tools for analyzing and predicting time-series data, but they require careful
-        consideration of the~specific characteristics of the~data being analyzed and the~appropriate model to use.
+        that influence each other. It can be used to analyse the~relationships between these variables and to make
+        predictions about their future behaviour.
     \end{itemize}
+All these models are valuable tools for analysing and predicting time-series data, but they require careful
+        consideration of the~specific characteristics of the~data being analysed and the~appropriate model to use.
+
 
     \section{Neural networks} \label{sec:nn}
-    A neural network is a~type of machine learning algorithm inspired by the~structure and function of biological neurons in the~human brain. It is composed of interconnected nodes, called neurons, that are organized into layers. The~input layer receives raw data, such as images or text, and passes it on to the~hidden layers, which perform calculations and apply weights to the~input data to create a~prediction. Finally, the~output layer produces the~final prediction or classification.\\
-    \\
+    A neural network is a~type of machine learning algorithm inspired by the~structure and function of biological neuron in the~human brain. It is composed of interconnected nodes, called neurons, that are organised into layers. The~input layer receives raw data, such as images or text, and passes it on to the~hidden layers, which perform calculations and apply weights to the~input data to create a~prediction. Finally, the~output layer produces the~final prediction or classification.
+    
     As we can see on image \ref{fig:perceptron} each input $X_n$ should be properly weighted by a~certain weight $W_n$ before all the~signals enter the~summation stage. Afterwards, the~weighted summation is forwarded into the~activation unit producing the~neuron’s output signal.
     \begin{center}
         \begin{figure}[!ht]
@@ -95,20 +95,20 @@ Some commonly used time-series models include:
             \label{fig:perceptron}
         \end{figure}
     \end{center}
-    Neural networks are trained on large datasets using a~process called backpropagation, which adjusts the~weights and biases of the~neurons to minimize the~error between the~predicted output and the~actual output. Once a~neural network has been trained, it can be used to make predictions on new data.\\
-    \\
+    Neural networks are trained on large datasets using a~process called back-propagation, which adjusts the~weights and biases of the~neurons to minimise the~error between the~predicted output and the~actual output. Once a~neural network has been trained, it can be used to make predictions on new data.
+    
     A neuron is a~basic building block of a~neural network, also known as~an~artificial neuron or a~perceptron.
-It is modeled after the~biological neuron in the~human brain, which receives input signals from other neurons,
-processes them, and sends output signals to other neurons.\\
-    \\
-    In a~neural network, a~neuron receives input from other neurons or directly from the~input data, applies a~mathematical function to the~input, and produces~an~output that is sent to other neurons in the~network. The~input to a~neuron is usually a~vector of numbers, and each input is multiplied by a~corresponding weight. The~neuron then sums up the weighted inputs, adds a~bias term, and applies~an~activation function to the~result.\\
-    \\
-    The purpose of the~activation function is to introduce nonlinearity into the~neuron, which allows the~neural network to learn complex patterns and relationships in the~data. There are several different types of activation functions that can be used, such as the~sigmoid function, ReLU (Rectified Linear Unit) function, and tanh (hyperbolic tangent) function.\\
-    \\
+It is modelled based on the~biological neuron in the~human brain, which receives input signals from other neurons,
+processes them, and sends output signals to other neurons.
+
+    In a~neural network, a~neuron receives input from other neurons or directly from the~input data, applies a~mathematical function to the~input, and produces~an~output that is sent to other neurons in the~network. The~input to a~neuron is usually a~vector of numbers, and each input is multiplied by a~corresponding weight. The~neuron then sums up the weighted inputs, adds a~bias term, and applies~an~activation function to the~result.
+
+    The purpose of the~activation function is to introduce nonlinearity into the~neuron, which allows the~neural network to learn complex patterns and relationships in the~data. There are several different types of activation functions that can be used, such as the~sigmoid function, ReLU (Rectified Linear Unit) function, and tanh (hyperbolic tangent) function.
+    
     The output of a~neuron is typically fed into other neurons in the~next layer of the~neural network. The~weights and biases of the~neurons are adjusted during the~training process using a~technique called backpropagation, which involves computing the~gradient of the~error with respect to the~weights and updating them using~an~optimization algorithm such as stochastic gradient descent.\\
     \\
     \textbf{Feedforward Neural Networks}\\
-    These are the~most basic type of neural networks, where the~information flows only in one direction,from input to output. These networks can have one or more hidden layers and are often used for classification or regression tasks. Shema on basic feedforward NN is on fig~\ref{fig:ff}
+    These are the~most basic types of neural networks, where the~information flows only in one direction, from input to output. These networks can have one or more hidden layers and are often used for classification or regression tasks. The schema of a basic feedforward NN is on Fig.~\ref{fig:ff}.
     \begin{center}
         \begin{figure}[!ht]
             \centering
@@ -118,7 +118,7 @@ processes them, and sends output signals to other neurons.\\
         \end{figure}
     \end{center}
     \textbf{Convolutional Neural Networks (CNNs)}\\
-    These networks are specialized for processing images and are commonly used in computer vision tasks. They use convolutional layers to extract features from images and can learn to recognize patterns and objects in images see in fig~\ref{fig:cn}
+    These networks are specialised for processing images and are commonly used in computer vision tasks. They use convolutional layers to extract features from images and can learn to recognise patterns and objects in images see in Fig.~\ref{fig:cn}.
     \begin{center}
         \begin{figure}[!ht]
             \centering
@@ -129,8 +129,8 @@ processes them, and sends output signals to other neurons.\\
         \end{figure}
     \end{center}
     \textbf{Recurrent Neural Networks (RNNs)}\\
-    These networks are designed to work with sequential data, such as time-series or natural language data. They have loops that allow information to be passed from one time-step to the~next, enabling them to capture temporal dependencies in the~data, described on fig~\ref{fig:rn}
-    \begin{center}
+    These networks are designed to work with sequential data, such as time-series or natural language data. They have loops that allow information to be passed from one time-step to the~next, enabling them to capture temporal dependencies in the~data, described on Fig.~\ref{fig:rn}.
+        \begin{center}
         \begin{figure}[!ht]
             \centering
             \includegraphics[width=0.4\textwidth]{figures/rn}
@@ -139,7 +139,7 @@ processes them, and sends output signals to other neurons.\\
         \end{figure}
     \end{center}
     \textbf{Long Short-Term Memory Networks (LSTMs)}\\
-    These are a~type of RNN that are designed to address the~problem of vanishing gradients in traditional RNNs. They use memory cells and gates to selectively retain or forget information over time, making them well-suited for learning from long sequences. As you can see on fig~\ref{fig:ltmn} color indicates degree of memory activation.
+    These are a~type of RNN that are designed to address the~problem of vanishing gradients in traditional RNNs. They use memory cells and gates to selectively retain or forget information over time, making them well-suited for learning from long sequences. As you can see on Fig.~\ref{fig:ltmn} colour indicates degree of memory activation.
     \begin{center}
         \begin{figure}[!ht]
             \centering
@@ -149,7 +149,7 @@ processes them, and sends output signals to other neurons.\\
         \end{figure}
     \end{center}
     \textbf{Autoencoder Neural Networks}\\
-    These networks are used for unsupervised learning and are designed to learn a~compressed representation of the~input data. As we can see on figure~\ref{fig:ann} they consist of~an~encoder that maps the~input data to a~compressed representation, and a~decoder that maps the~compressed representation back to the~original data.
+    These networks are used for unsupervised learning and are designed to learn a~compressed representation of the~input data. As we can see on Fig.~\ref{fig:ann} they consist of~an~encoder that maps the~input data to a~compressed representation, and a~decoder that maps the~compressed representation back to the~original data.
     \begin{center}
         \begin{figure}[!ht]
             \centering
@@ -159,7 +159,7 @@ processes them, and sends output signals to other neurons.\\
         \end{figure}
     \end{center}
     \textbf{Generative Adversarial Networks (GANs)}\\
-    These networks consist of two networks, a~generator and a~discriminator (see on figure~\ref{fig:gan}), that are trained together in a~game-theoretic framework. The~generator is trained to generate realistic data samples, while the~discriminator is trained to distinguish between real and generated data samples.
+    These networks consist of two networks, a~generator and a~discriminator (see on Fig.~\ref{fig:gan}), that are trained together in a~game-theoretic framework. The~generator is trained to generate realistic data samples, while the~discriminator is trained to distinguish between real and generated data samples.
     \begin{center}
         \begin{figure}[!ht]
             \centering
@@ -170,17 +170,17 @@ processes them, and sends output signals to other neurons.\\
     \end{center}
     
     \subsection{Classification} \label{subsec:clasification}
-    Neural network data classification is a~technique for categorizing data into different classes or categories based on patterns and features present in the~data. a~neural network is a~type of machine learning algorithm that is modeled after the~structure and function of the~human brain. It is composed of interconnected nodes or neurons that are organized into layers.\\
-    \\
+    Neural network data classification is a~technique for categorising data into different classes or categories based on patterns and features present in the~data. a~neural network is a~type of machine learning algorithm that is modelled after the~structure and function of the~human brain. It is composed of interconnected nodes or neurons that are organised into layers.
+    
     In a~classification task, the~neural network is trained on a~dataset that is labeled with the~correct
 class for each example. During training, the~network learns to recognize patterns and features in the~input data
-that are associated with each class. The~process of training involves adjusting the~weights and biases of the~neurons in the~network to minimize the~error between the~predicted class and the~actual class of each example in the training set.\\
-    \\
+that are associated with each class. The~process of training involves adjusting the~weights and biases of the~neurons in the~network to minimise the~error between the~predicted class and the~actual class of each example in the training set.
+
     Neural network data classification has been successfully applied to a~wide range of tasks, including image
 classification, speech recognition, natural language processing, and fraud detection, among others~\cite{feraud2002methodology}.
 
     \subsection{Activation functions} \label{subsec:nnaf}
-    There are several types of activation functions~\cite{geron2022hands} used in neural networks, as we can see on figure~\ref{fig:activationfunctions} including:
+    There are several types of activation functions~\cite{geron2022hands} used in neural networks, as we can see on Fig.~\ref{fig:activationfunctions} including:
     \begin{itemize}
         \item Sigmoid Function: the~sigmoid function is a~commonly used activation function that maps any input value to a~value between 0 and 1. It is typically used in binary classification problems and in the~output layer of neural networks that produce probability estimates~\ref{fig:sigmoid}.
         \item ReLU (Rectified Linear Unit): the~ReLU function is another popular activation function that maps any input value less than 0 to 0, and any input value greater than or equal to 0 to the~input value itself. It is computationally efficient and has been shown to work well in deep neural networks~\ref{fig:relu}.
