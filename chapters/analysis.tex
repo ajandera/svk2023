@@ -36,13 +36,12 @@
         and understand the relationship between variables. There are several types of
         regression models, including:
         \begin{itemize}
-            \item Linear regression, that uses a~linear equation to describe the relation
-            between independent and dependent variables,
+            \item Linear regression, that uses a~linear equation to describe the relation between independent and dependent variables,
             \item Logistic regression, where
             the~dependent variable is binary, being either 0 or 1,
             \item Multiple regression is used, when there are multiple independent variables,
-            \item Polynomial regression is used when the~relationship between the~dependent
-            and independent variables is non-linear.
+            \item Polynomial regression is used when the~relationship between the~dependent and independent variables
+            is non-linear.
         \end{itemize}
 
         The choice of regression model depends on the~nature of the~data and
@@ -88,7 +87,7 @@ All these models are valuable tools for analysing and predicting time-series dat
     
     As we can see on image \ref{fig:perceptron} each input $X_n$ should be properly weighted by a~certain weight $W_n$ before all the~signals enter the~summation stage. Afterwards, the~weighted summation is forwarded into the~activation unit producing the~neuron’s output signal.
     \begin{center}
-        \begin{figure}[!ht]
+        \begin{figure}[]
             \centering
             \includegraphics[width=0.6\textwidth]{figures/nn}
             \caption{Perceptron preview. \cite{Mourgias-Alexandris:19}}
@@ -110,7 +109,7 @@ processes them, and sends output signals to other neurons.
     \textbf{Feedforward Neural Networks}\\
     These are the~most basic types of neural networks, where the~information flows only in one direction, from input to output. These networks can have one or more hidden layers and are often used for classification or regression tasks. The schema of a basic feedforward NN is on Fig.~\ref{fig:ff}.
     \begin{center}
-        \begin{figure}[!ht]
+        \begin{figure}[]
             \centering
             \includegraphics[width=0.6\textwidth]{figures/ff}
             \caption{Typical feed-forward neural network composed of three layers. \cite{svozil1997quantum}}
@@ -120,7 +119,7 @@ processes them, and sends output signals to other neurons.
     \textbf{Convolutional Neural Networks (CNNs)}\\
     These networks are specialised for processing images and are commonly used in computer vision tasks. They use convolutional layers to extract features from images and can learn to recognise patterns and objects in images see in Fig.~\ref{fig:cn}.
     \begin{center}
-        \begin{figure}[!ht]
+        \begin{figure}[]
             \centering
             \includegraphics[width=0.8\textwidth]{figures/cn}
             \caption{Illustration of (a) Convolution, (b) Tiled Convolution, (c) Dilated Convolution, and (d)
@@ -131,7 +130,7 @@ processes them, and sends output signals to other neurons.
     \textbf{Recurrent Neural Networks (RNNs)}\\
     These networks are designed to work with sequential data, such as time-series or natural language data. They have loops that allow information to be passed from one time-step to the~next, enabling them to capture temporal dependencies in the~data, described on Fig.~\ref{fig:rn}.
         \begin{center}
-        \begin{figure}[!ht]
+        \begin{figure}[]
             \centering
             \includegraphics[width=0.4\textwidth]{figures/rn}
             \caption{Typical recurrent network. \cite{medsker2001recurrent}}
@@ -141,7 +140,7 @@ processes them, and sends output signals to other neurons.
     \textbf{Long Short-Term Memory Networks (LSTMs)}\\
     These are a~type of RNN that are designed to address the~problem of vanishing gradients in traditional RNNs. They use memory cells and gates to selectively retain or forget information over time, making them well-suited for learning from long sequences. As you can see on Fig.~\ref{fig:ltmn} colour indicates degree of memory activation.
     \begin{center}
-        \begin{figure}[!ht]
+        \begin{figure}[]
             \centering
             \includegraphics[width=0.35\textwidth]{figures/ltmn}
             \caption{Long short-term memory network. \cite{cheng2016long}}
@@ -151,7 +150,7 @@ processes them, and sends output signals to other neurons.
     \textbf{Autoencoder Neural Networks}\\
     These networks are used for unsupervised learning and are designed to learn a~compressed representation of the~input data. As we can see on Fig.~\ref{fig:ann} they consist of~an~encoder that maps the~input data to a~compressed representation, and a~decoder that maps the~compressed representation back to the~original data.
     \begin{center}
-        \begin{figure}[!ht]
+        \begin{figure}[]
             \centering
             \includegraphics[width=0.5\textwidth]{figures/ann}
             \caption{An autoencoder neural network. \cite{luo2018distributed}}
@@ -180,19 +179,16 @@ that are associated with each class. The~process of training involves adjusting 
 classification, speech recognition, natural language processing, and fraud detection, among others~\cite{feraud2002methodology}.
 
     \subsection{Activation functions} \label{subsec:nnaf}
-    There are several types of activation functions~\cite{geron2022hands} used in neural networks, as we can see on Fig.~\ref{fig:activationfunctions} including:
-    \begin{itemize}
-        \item Sigmoid Function: the~sigmoid function is a~commonly used activation function that maps any input value to a~value between 0 and 1. It is typically used in binary classification problems and in the~output layer of neural networks that produce probability estimates~\ref{fig:sigmoid}.
-        \item ReLU (Rectified Linear Unit): the~ReLU function is another popular activation function that maps any input value less than 0 to 0, and any input value greater than or equal to 0 to the~input value itself. It is computationally efficient and has been shown to work well in deep neural networks~\ref{fig:relu}.
-        \item Tanh Function: the~tanh (hyperbolic tangent) function is similar to the~sigmoid function, but it maps input values to a~range between -1 and 1. It is commonly used in the~hidden layers of neural networks~\ref{fig:tahn}.
-        \item Softmax Function: the~softmax function is often used in the~output layer of neural networks that produce multi-class classification predictions. It maps the~outputs to a~probability distribution over the~possible classes~\ref{fig:sigmsoftmaxoid}.
-        \item Leaky ReLU: the~Leaky ReLU function is similar to the~ReLU function, but it allows a~small, non-zero gradient when the~input value is negative. This can help to prevent the~"dying ReLU" problem, where some ReLU units become inactive and stop contributing to the~network's output~\ref{fig:leakyrelu}.
-        \item ELU (Exponential Linear Unit): the~ELU function is similar to the~ReLU function, but it allows negative values to have non-zero outputs. This can help to prevent the~"dying ReLU" problem and can improve the performance of deep neural networks~\ref{fig:elu}.
-    \end{itemize}
-    
-    \begin{figure}[!ht]
+    There are many types of activation functions, that have been developed
+    for specific tasks or to address certain problems, but to the mast common activation functions used in neural networks~\cite{geron2022hands} belong:
+
+\emph{ReLU Function} (Rectified Linear Unit) maps any input value less than 0 to 0, and any input value greater than or equal to 0 to the~input value itself. It is computationally efficient and has been shown to work well in deep neural networks (Fig.~\ref{fig:relu}).
+
+\emph{Sigmoid Function} is a~commonly used activation function that maps any input value to a~value between 0 and 1. It is typically used in binary classification problems and in the~output layer of neural networks that produce probability estimates (Fig.~\ref{fig:sigmoid}).
+
+  \begin{figure}[!ht]
         \centering
-        \begin{subfigure}[b]{0.3\textwidth}
+        \begin{subfigure}[b]{0.30\textwidth}
             \includegraphics[width=\textwidth]{figures/relu}
             \caption{ReLU}
             \label{fig:relu}
@@ -203,6 +199,16 @@ classification, speech recognition, natural language processing, and fraud detec
             \caption{Sigmoid}
             \label{fig:sigmoid}
         \end{subfigure}
+        \caption{Neural network activation functions: ReLU and Sigmoid.}
+        \label{fig:activationfunctions}
+    \end{figure}
+
+\emph{Tanh Function} (hyperbolic tangent) function is similar to the~sigmoid function, but it maps input values to a~range between -1 and 1. It is commonly used in the~hidden layers of neural networks (Fig.~\ref{fig:tahn}).
+
+\emph{Softmax Function} is often used in the~output layer of neural networks that produce multi-class classification predictions. It maps the~outputs to a~probability distribution over the~possible classes (Fig.~\ref{fig:sigmsoftmaxoid}).
+
+  \begin{figure}[!ht]
+        \centering
         \begin{subfigure}[b]{0.3\textwidth}
             \includegraphics[width=\textwidth]{figures/tanh}
             \caption{Tanh}
@@ -214,6 +220,16 @@ classification, speech recognition, natural language processing, and fraud detec
             \caption{Softmax}
             \label{fig:sigmsoftmaxoid}
         \end{subfigure}
+             \caption{Neural network activation functions: Tanh and Softmax.}
+        \label{fig:activationfunctions}
+    \end{figure}
+
+\emph{Leaky ReLU Function} is similar to the~ReLU function, but it allows a~small, non-zero gradient when the~input value is negative. This can help to prevent the~``dying ReLU'' problem (Fig.~\ref{fig:leakyrelu}).
+
+\emph{ELU Function} (Exponential Linear Unit) is similar to the~ReLU function, but it allows negative values to have non-zero outputs. It can improve the performance of the deep neural networks (Fig.~\ref{fig:elu}).
+%
+    \begin{figure}[!ht]
+        \centering
         \begin{subfigure}[b]{0.3\textwidth}
             \includegraphics[width=\textwidth]{figures/leakyrelu}
             \caption{Leaky ReLU}
@@ -225,10 +241,6 @@ classification, speech recognition, natural language processing, and fraud detec
             \caption{ELU}
             \label{fig:elu}
         \end{subfigure}
-        \caption{Neural network activation functions.}
+        \caption{Neural network activation functions: Leaky ReLU and ELU.}
         \label{fig:activationfunctions}
     \end{figure}
-
-    \noindent These are some of the~most commonly used activation functions in neural networks,
-    but there are many other types of activation functions that have been developed
-    for specific tasks or to address certain problems.
